@@ -1,15 +1,15 @@
 let canvas = document.querySelector('canvas');
 const ctx  = canvas.getContext('2d');
-document.body.style.zoom  = "200%";
+document.body.style.zoom  = "180%";
 const scoreEl = document.querySelector('#scoreEl')
 const image1 = new Image();
-image1.src ='/Images/zelda.png'
+image1.src ='../Images/zelda.png'
 
 
 
 //que el canvas ocupe toda la pantalla
-canvas.height = innerHeight;
-canvas.width = innerWidth;
+//canvas.height = innerHeight;
+//canvas.width = innerWidth;
 
 class Boundary{
     static width = 40;
@@ -186,28 +186,28 @@ const ghosts = [
         },
         color: 'green'
     }),
-    new Ghost({
-        position:{
-            x:Boundary.width * 19 + Boundary.width/2,
-            y: Boundary.height * 22 + Boundary.height/2
-        },
-        velocity:{
-            x: Ghost.speed,
-            y:0
-        },
-        color: 'red'
-    }),
-    new Ghost({
-        position:{
-            x:Boundary.width * 19 + Boundary.width/2,
-            y: Boundary.height * 22 + Boundary.height/2
-        },
-        velocity:{
-            x: Ghost.speed,
-            y:0
-        },
-        color: 'green'
-    }),
+    // new Ghost({
+    //     position:{
+    //         x:Boundary.width * 19 + Boundary.width/2,
+    //         y: Boundary.height * 22 + Boundary.height/2
+    //     },
+    //     velocity:{
+    //         x: Ghost.speed,
+    //         y:0
+    //     },
+    //     color: 'red'
+    // }),
+    // // new Ghost({
+    //     position:{
+    //         x:Boundary.width * 19 + Boundary.width/2,
+    //         y: Boundary.height * 22 + Boundary.height/2
+    //     },
+    //     velocity:{
+    //         x: Ghost.speed,
+    //         y:0
+    //     },
+    //     color: 'green'
+    // }),
  
     
     new Ghost({
