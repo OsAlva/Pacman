@@ -9,3 +9,15 @@ p{
     font-size: 20px;
     margin: 10px;
 }
+
+canvas{
+    z-index: 0.5;
+    position: absolute;
+}
+
+#picture{
+    z-index: 0;
+    position: absolute;
+    left: 50px;
+    top: 120px;
+}

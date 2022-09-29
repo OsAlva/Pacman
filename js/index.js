@@ -5,11 +5,29 @@ const scoreEl = document.querySelector('#scoreEl')
 const image1 = new Image();
 image1.src ='../Images/zelda.png'
 
+// const lose = new Image();
+// lose.src = '../Images/Youlose.png'
+
+//isGameOver
+let isGameOver = false;
+let didWin = false;
+
+let algo = document.getElementById('picture');
+
+//audio
+ const audioOpening = new Audio("../audio//juego.mp3")
+// audioOpening.play();
+// audioOpening.pause();
+// audioOpening.loop = true; //false
+// audioOpening.volume = 1 //entre 1 y 0
+
+
 
 
 //que el canvas ocupe toda la pantalla
 //canvas.height = innerHeight;
 //canvas.width = innerWidth;
+
 
 class Boundary{
     static width = 40;
@@ -273,11 +291,14 @@ const map = [
     ['4', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '3']
 ]
 
+
+
 function createImage(src){
     const image = new Image();
     image.src = src;
     return image;
 }
+
 
 
 map.forEach((row,i) =>{
@@ -492,6 +513,22 @@ map.forEach((row,i) =>{
     });
 })
 
+
+function displayGameOver(isGameOver){
+    if(!isGameOver){
+        // ctx.fillStyle = "white";
+        // ctx.font = "70px Arial";
+        // ctx.fillText("YOU LOSE!!",200,350);
+        //algo.style.zIndex = 1;
+        //algo.classList.add()
+        //ctx.drawImage(algo,220,210,350,350);
+    }else{
+        ctx.fillStyle = "white";
+        ctx.font = "70px Arial";
+        ctx.fillText("YOU WIN!!",200,350);
+    }
+}
+
 function circleCollidesWithRectangle({
     circle, 
     rectangle
@@ -617,8 +654,12 @@ function animate(){
         if(ghost.scared){
             ghosts.splice(i,1)
         }else{
+            //displayGameOver(false);
+            console.log("drjkvn dkjv ndkv jkv fkv kvf k fdkd");
+            console.log("entra!!!");
             cancelAnimationFrame(animationId);
-            console.log('YOU LOSE!!')
+            alert("YOU LOSE!!!")
+            //console.log('YOU LOSE!!')
         }
     }
 }
@@ -627,6 +668,7 @@ function animate(){
     if(pellets.length === 0){
         console.log('YOU WIN!!!');
         alert('YOU WIN!!');
+        //displayGameOver(true);
         cancelAnimationFrame(animationId);
     }
 
@@ -685,6 +727,8 @@ function animate(){
 
     boundaries.forEach((boundary) =>{
         boundary.draw();
+        // audioOpening.play();
+        // audioOpening.loop = true;
 
         if(circleCollidesWithRectangle({
             circle: player,
