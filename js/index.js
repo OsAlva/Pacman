@@ -3,7 +3,7 @@ const ctx  = canvas.getContext('2d');
 document.body.style.zoom  = "180%";
 const scoreEl = document.querySelector('#scoreEl')
 const image1 = new Image();
-image1.src ='../Images/zelda.png'
+image1.src ='Images/zelda.png'
 
 // const lose = new Image();
 // lose.src = '../Images/Youlose.png'
@@ -15,7 +15,7 @@ let didWin = false;
 let algo = document.getElementById('picture');
 
 //audio
- const audioOpening = new Audio("../audio//juego.mp3")
+ const audioOpening = new Audio("audio/juego.mp3")
 // audioOpening.play();
 // audioOpening.pause();
 // audioOpening.loop = true; //false
@@ -312,7 +312,7 @@ map.forEach((row,i) =>{
                                     x: Boundary.width * j,
                                     y: Boundary.height * i
                                 },
-                                image: createImage('../Images/pipeHorizontal.png')
+                                image: createImage('Images/pipeHorizontal.png')
                             })
                         )
                 break;
@@ -324,7 +324,7 @@ map.forEach((row,i) =>{
                                     x: Boundary.width * j,
                                     y: Boundary.height * i
                                 },
-                                image: createImage('../Images/pipeVertical.png')
+                                image: createImage('Images/pipeVertical.png')
                             })
                         )
                 break;
@@ -336,7 +336,7 @@ map.forEach((row,i) =>{
                                     x: Boundary.width * j,
                                     y: Boundary.height * i
                                 },
-                                image: createImage('../Images/pipeCorner1.png')
+                                image: createImage('Images/pipeCorner1.png')
                             })
                         )
                 break;
@@ -348,7 +348,7 @@ map.forEach((row,i) =>{
                                 x: Boundary.width * j,
                                 y: Boundary.height * i
                             },
-                            image: createImage('../Images/pipeCorner2.png')
+                            image: createImage('Images/pipeCorner2.png')
                         })
                     )
             break;
@@ -360,7 +360,7 @@ map.forEach((row,i) =>{
                                     x: Boundary.width * j,
                                     y: Boundary.height * i
                                 },
-                                image: createImage('../Images/pipeCorner3.png')
+                                image: createImage('Images/pipeCorner3.png')
                             })
                         )
                 break;
@@ -372,7 +372,7 @@ map.forEach((row,i) =>{
                                 x: Boundary.width * j,
                                 y: Boundary.height * i
                             },
-                            image: createImage('../Images/pipeCorner4.png')
+                            image: createImage('Images/pipeCorner4.png')
                         })
                     )
             break;
@@ -383,7 +383,7 @@ map.forEach((row,i) =>{
                                     x: Boundary.width * j,
                                     y: Boundary.height * i
                                 },
-                                image: createImage('../Images/block.png')
+                                image: createImage('Images/block.png')
                             })
                         )
             break;
@@ -394,7 +394,7 @@ map.forEach((row,i) =>{
                                 x: j * Boundary.width,
                                 y: i * Boundary.height
                             },
-                            image: createImage('../Images/capLeft.png')
+                            image: createImage('Images/capLeft.png')
                         })
                         )
             break;
@@ -405,7 +405,7 @@ map.forEach((row,i) =>{
                             x: j * Boundary.width,
                             y: i * Boundary.height
                             },
-                            image: createImage('../Images/capRight.png')
+                            image: createImage('Images/capRight.png')
                         })
                         )
             break;
@@ -416,7 +416,7 @@ map.forEach((row,i) =>{
                             x: j * Boundary.width,
                             y: i * Boundary.height
                             },
-                            image: createImage('../Images/capBottom.png')
+                            image: createImage('Images/capBottom.png')
                         })
                         )
             break;
@@ -427,7 +427,7 @@ map.forEach((row,i) =>{
                             x: j * Boundary.width,
                             y: i * Boundary.height
                             },
-                            image: createImage('../Images/capTop.png')
+                            image: createImage('Images/capTop.png')
                         })
                         )
             break;
@@ -438,7 +438,7 @@ map.forEach((row,i) =>{
                             x: j * Boundary.width,
                             y: i * Boundary.height
                             },
-                            image: createImage('../Images/pipeCross.png')
+                            image: createImage('Images/pipeCross.png')
                         })
                         )
              break;
@@ -450,7 +450,7 @@ map.forEach((row,i) =>{
                             y: i * Boundary.height
                             },
                             color: 'blue',
-                            image: createImage('../Images/pipeConnectorTop.png')
+                            image: createImage('Images/pipeConnectorTop.png')
                         })
                         )
              break;
@@ -462,7 +462,7 @@ map.forEach((row,i) =>{
                             y: i * Boundary.height
                             },
                             color: 'blue',
-                            image: createImage('../Images/pipeConnectorRight.png')
+                            image: createImage('Images/pipeConnectorRight.png')
                         })
                         )
              break;
@@ -474,7 +474,7 @@ map.forEach((row,i) =>{
                             y: i * Boundary.height
                             },
                             color: 'blue',
-                            image: createImage('../Images/pipeConnectorBottom.png')
+                            image: createImage('Images/pipeConnectorBottom.png')
                         })
                         )
              break;
@@ -485,7 +485,7 @@ map.forEach((row,i) =>{
                             x: j * Boundary.width,
                             y: i * Boundary.height
                             },
-                            image: createImage('../Images/pipeConnectorLeft.png')
+                            image: createImage('Images/pipeConnectorLeft.png')
                         })
                         )
              break;
