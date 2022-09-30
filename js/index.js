@@ -1,6 +1,6 @@
 let canvas = document.querySelector('canvas');
 const ctx  = canvas.getContext('2d');
-document.body.style.zoom  = "50%";
+document.body.style.zoom  = "180%";
 const scoreEl = document.querySelector('#scoreEl')
 const image1 = new Image();
 image1.src ='Images/zelda.png'
